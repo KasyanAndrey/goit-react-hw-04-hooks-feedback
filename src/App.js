@@ -14,13 +14,19 @@ export default function App() {
   const handleFeedbacksClick = event => {
     switch (event.target.name) {
       case 'good':
-        return setGood(state => state + 1);
-      case 'neutral':
-        return setNeutral(state => state + 1);
-      case 'bad':
-        return setBad(state => state + 1);
+        setGood(state => state + 1);
+        break;
 
-      // no default
+      case 'neutral':
+        setNeutral(state => state + 1);
+        break;
+
+      case 'bad':
+        setBad(state => state + 1);
+        break;
+
+      default:
+        return;
     }
   };
 
